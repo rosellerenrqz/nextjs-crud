@@ -10,10 +10,14 @@ const AddTopic = () => {
       <Card>
         <main className="mx-auto p-1 text-center sm:w-3/4">
           <div className="mb-4">
-            <label className="mb-2 block text-lg font-medium text-white">
+            <label
+              htmlFor="title"
+              className="mb-2 block text-lg font-medium text-white"
+            >
               Topic Title:{" "}
             </label>
             <input
+              id="title"
               type="text"
               placeholder="Topic Title"
               className="w-full rounded-md border border-slate-300 px-2 py-2"
@@ -22,10 +26,14 @@ const AddTopic = () => {
           </div>
 
           <div className="mb-4">
-            <label className="mb-2 block text-lg font-medium text-white">
+            <label
+              htmlFor="description"
+              className="mb-2 block text-lg font-medium text-white"
+            >
               Topic Description:{" "}
             </label>
             <input
+              id="description"
               type="text"
               placeholder="Topic Description"
               className="w-full rounded-md  border-slate-300 px-2 py-2"
