@@ -19,10 +19,18 @@ export async function POST(request) {
 }
 
 export async function GET() {
-  await connectMongoDB()
-  const topics = await Topic.find()
+  try {
+    await connectMongoDB()
+    const topics = await Topic.find()
 
-  return NextResponse.json({ topics })
+    return NextResponse.json({ topics })
+  } catch (error) {
+    console.log(error)
+    return NextResponse.json(
+      { message: "Internal Server Error" },
+      { status: 500 }
+    )
+  }
 }
 
 export async function DELETE(request) {

@@ -3,7 +3,7 @@ import Card from "./UI/Card"
 
 const EditTopicForm = () => {
   return (
-    <>
+    <div>
       <h1 className="mb-4 text-center text-2xl font-bold text-gray-300">
         Edit Topic Form
       </h1>
@@ -38,7 +38,7 @@ const EditTopicForm = () => {
           </button>
         </main>
       </Card>
-    </>
+    </div>
   )
 }
 
