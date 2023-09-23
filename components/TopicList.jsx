@@ -21,7 +21,7 @@ const TopicList = async () => {
           </div>
 
           <div className="flex items-start gap-2">
-            <RemoveBtn />
+            <RemoveBtn id={topic._id} />
             <Link
               href={`/edit-topic/${topic._id}`}
               className="text-white hover:opacity-80"

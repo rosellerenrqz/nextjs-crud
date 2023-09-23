@@ -5,6 +5,7 @@ import { NextResponse } from "next/server"
 export async function POST(request) {
   try {
     const { title, description } = await request.json()
+    console.log("received data", { title, description })
     //connect to database
     await connectMongoDB()
     await Topic.create({ title, description })

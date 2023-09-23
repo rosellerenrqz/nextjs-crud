@@ -1,14 +1,11 @@
 "use client"
 
 import React, { useState } from "react"
-// import { useRouter } from "next/router"
 import Card from "@/components/UI/Card"
 
 const AddTopicForm = () => {
   const [title, setTitle] = useState("")
   const [description, setDescription] = useState("")
-
-  // const router = useRouter()
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -19,14 +16,14 @@ const AddTopicForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost/api/topics", {
+      const response = await fetch("http://localhost:3000/api/topics", {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({ title, description }),
       })
 
       if (response.ok) {
-        // router.push("/")
+        location.href = "http://localhost:3000"
         setTitle("")
         setDescription("")
       }
